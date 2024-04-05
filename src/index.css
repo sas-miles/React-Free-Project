@@ -1,0 +1,10 @@
+@import url("https://api.fontshare.com/v2/css?f[]=switzer@400&f[]=boska@100&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
