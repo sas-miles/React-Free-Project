@@ -69,7 +69,7 @@ export const Experience = ({ section, modelSrc }) => {
       />
 
       <mesh ref={box}>
-        <Building modelSrc={modelSrc} />
+        <Building />
       </mesh>
 
       <Environment preset="dawn" />

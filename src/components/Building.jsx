@@ -10,7 +10,7 @@ Title: Interactive Architectural Building Model
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export function Building({ modelSrc }) {
+export function Building(props) {
   const { nodes, materials } = useGLTF(
     "https://react-three-slider.netlify.app/models/building.glb"
   );
