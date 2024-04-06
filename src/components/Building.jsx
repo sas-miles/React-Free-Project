@@ -11,7 +11,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Building({ modelSrc }) {
-  const { nodes, materials } = useGLTF(modelSrc);
+  const { nodes, materials } = useGLTF(
+    "https://react-three-slider.netlify.app/model/building.glb"
+  );
   const ref = useRef();
 
   return (
@@ -169,4 +171,4 @@ export function Building({ modelSrc }) {
   );
 }
 
-// useGLTF.preload("/models/house.glb");
+useGLTF.preload("/models/house.glb");
