@@ -19,7 +19,7 @@ const cameraPositions = {
   "action-button": [0, 3, 8, 0, -1, 0],
 };
 
-export const Experience = ({ section, onSectionChange, modelSrc }) => {
+export const Experience = ({ section, modelSrc }) => {
   const box = useRef();
   const controls = useRef();
 

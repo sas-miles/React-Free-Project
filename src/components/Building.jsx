@@ -169,4 +169,4 @@ export function Building({ modelSrc }) {
   );
 }
 
-useGLTF.preload("/models/house.glb");
+// useGLTF.preload("/models/house.glb");

@@ -1,4 +1,4 @@
 [[headers]]
-for = "/assets/*"
-[headers.values]
-Access-Control-Allow-Origin = "https://react-three-fiber-2cc99b8745285f82e4d3d.webflow.io"
+  for = "/models/*" # Or "*" to apply to all resources
+  [headers.values]
+  Access-Control-Allow-Origin = "*"
