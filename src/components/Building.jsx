@@ -171,4 +171,4 @@ export function Building({ modelSrc }) {
   );
 }
 
-useGLTF.preload("/models/house.glb");
+useGLTF.preload("https://react-three-slider.netlify.app/model/building.glb");
