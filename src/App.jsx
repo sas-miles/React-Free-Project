@@ -4,7 +4,7 @@ import { Experience } from "./components/Experience";
 import { UI } from "./components/UI";
 import { useState } from "react";
 
-function App() {
+function App({ modelSrc }) {
   const [section, setSection] = useState(0);
 
   return (
@@ -12,7 +12,7 @@ function App() {
       <Canvas>
         <color attach="background" args={["#B7C0DC"]} />
 
-        <Experience section={section} />
+        <Experience section={section} modelSrc={modelSrc} />
       </Canvas>
       <UI section={section} onSectionChange={setSection} />
     </>

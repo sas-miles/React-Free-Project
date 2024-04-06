@@ -10,8 +10,8 @@ Title: Interactive Architectural Building Model
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export function Building(props) {
-  const { nodes, materials } = useGLTF("/models/house.glb");
+export function Building({ modelSrc }) {
+  const { nodes, materials } = useGLTFuseGLTF(modelSrc);
   const ref = useRef();
 
   return (

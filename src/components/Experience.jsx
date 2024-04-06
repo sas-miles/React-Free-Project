@@ -19,7 +19,7 @@ const cameraPositions = {
   "action-button": [0, 3, 8, 0, -1, 0],
 };
 
-export const Experience = ({ section, onSectionChange }) => {
+export const Experience = ({ section, onSectionChange, modelSrc }) => {
   const box = useRef();
   const controls = useRef();
 
@@ -69,7 +69,7 @@ export const Experience = ({ section, onSectionChange }) => {
       />
 
       <mesh ref={box}>
-        <Building />
+        <Building modelSrc={modelSrc} />
       </mesh>
 
       <Environment preset="dawn" />
