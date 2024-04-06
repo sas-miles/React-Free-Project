@@ -10,7 +10,6 @@ import {
 import { Building } from "./Building";
 import { useEffect, useRef, useState } from "react";
 import { degToRad } from "three/src/math/MathUtils";
-import { button, useControls } from "leva";
 import { sections } from "./UI";
 
 const cameraPositions = {
@@ -20,21 +19,9 @@ const cameraPositions = {
   "action-button": [0, 3, 8, 0, -1, 0],
 };
 
-export const Experience = ({ section }) => {
+export const Experience = ({ section, onSectionChange }) => {
   const box = useRef();
   const controls = useRef();
-
-  useControls("Settings", {
-    smoothTime: {
-      value: 0.3,
-      min: 0.1,
-      max: 2,
-      step: 0.1,
-      onChange: (value) => {
-        controls.current.smoothTime = value;
-      },
-    },
-  });
 
   const [introFinished, setIntroFinished] = useState(false);
 
@@ -65,6 +52,7 @@ export const Experience = ({ section }) => {
   return (
     <>
       <CameraControls
+        smoothTime={0.6}
         ref={controls}
         mouseButtons={{
           left: 0,
@@ -79,6 +67,7 @@ export const Experience = ({ section }) => {
           three: 0,
         }}
       />
+
       <mesh ref={box}>
         <Building />
       </mesh>
