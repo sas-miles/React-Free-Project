@@ -11,7 +11,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Building({ modelSrc }) {
-  const { nodes, materials } = useGLTFuseGLTF(modelSrc);
+  const { nodes, materials } = useGLTF(modelSrc);
   const ref = useRef();
 
   return (
